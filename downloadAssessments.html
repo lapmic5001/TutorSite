@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Download Assessments - Math Tutoring</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="navbar">
+         <li><a href="index.html">Home</a></li>
+         <li><a href="practice.html">Practice</a></li>
+         <li><a href="assessment.html">Take an Assessment</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="downloadSection">
+      <h2>Download Assessments</h2>
+      <p>Click the button below to download the assessment questions JSON file.</p>
+      <button id="downloadBtn">Download JSON</button>
+    </section>
+  </main>
+  <script>
+    document.getElementById('downloadBtn').addEventListener('click', function() {
+      // Sample questions array using our system of parameters
+      const questions = [
+        {
+          questionNumber: 1,
+          questionType: "Multiple Choice",
+          questionContent: "Solve for x: 2x + 3 = 7",
+          correctAnswer: "B",
+          answerTable: {
+            A: "x = 1",
+            B: "x = 2",
+            C: "x = 3",
+            D: "x = 4"
+          }
+        },
+        {
+          questionNumber: 2,
+          questionType: "Matching",
+          questionContent: "Match each equation with its solution.",
+          correctOrder: ["A", "B", "C"],
+          answerTable: {
+            A: "2x + 3 = 7, x = 2",
+            B: "3x - 2 = 7, x = 3",
+            C: "4x + 1 = 9, x = 2"
+          }
+        },
+        {
+          questionNumber: 3,
+          questionType: "Word Problem",
+          questionContent: "A car travels 60 miles in 1.5 hours. What is its speed?"
+        }
+      ];
+      
+      // Convert the array to a JSON string and trigger download
+      const jsonString = JSON.stringify(questions, null, 2);
+      const blob = new Blob([jsonString], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "assessments.json";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  </script>
+</body>
+</html>

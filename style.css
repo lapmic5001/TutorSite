@@ -1,0 +1,172 @@
+/* General body styling with a soft, non-repeating gradient */
+body {
+    background: linear-gradient(to bottom right, #87cefa, #9370db);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+/* Header and navbar styling */
+header {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: background 0.3s;
+}
+
+.navbar li a:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Center buttons on landing pages */
+.center-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.center-buttons button {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 15px 30px;
+    margin: 0 10px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition:
+        background 0.3s,
+        transform 0.2s;
+}
+
+.center-buttons button:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+}
+
+/* Topic buttons for practice page */
+.topic-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.topic-buttons button {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.topic-buttons button:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+/* Input fields and other elements */
+input[type="text"] {
+    padding: 10px;
+    margin-top: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Fraction styling for displaying fractions */
+.fraction {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+.fraction .numerator {
+    display: block;
+    font-size: 1.2em;
+}
+
+.fraction .denominator {
+    display: block;
+    border-top: 1px solid #fff;
+    font-size: 1.2em;
+    padding-top: 2px;
+}
+
+/* Styling for fraction answer inputs */
+.fraction-answer .fraction {
+    vertical-align: middle;
+}
+
+.fraction-input {
+    width: 50px;
+    text-align: center;
+    font-size: 1em;
+    margin: 0 2px;
+}
+
+button {
+    outline: none;
+}
+
+/* Section styling for practice pages */
+.practice-section {
+    max-width: 600px;
+    margin: 40px auto;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+/* New module for feedback and statistics */
+.feedback-section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.feedback-message {
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    transition: background-color 0.5s ease;
+    opacity: 0;
+}
+
+.feedback-message.show {
+    opacity: 1;
+}
+
+.stats {
+    font-size: 1.2em;
+    font-family: "Courier New", Courier, monospace;
+}

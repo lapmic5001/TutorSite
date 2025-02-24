@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assessments - Math Tutoring</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="practice.html">Practice</a></li>
+          <li><a href="downloadAssessments.html">Download Assessments</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="assessmentSection">
+        <h2>Enter Test Code</h2>
+        <input type="text" id="testCodeInput" placeholder="Enter test code" />
+        <button id="submitTestCodeBtn">Submit</button>
+        <div id="assessmentContent" style="display: none">
+          <!-- Preset assessment questions -->
+          <h3>Assessment</h3>
+          <p>Question 1: Solve for x in the equation 2x + 3 = 7.</p>
+          <p>Question 2: Word Problem – A car travels 60 miles in 1.5 hours. What is its speed?</p>
+          <!-- More questions can be added -->
+        </div>
+      </section>
+    </main>
+    <script src="scripts/assessment.js"></script>
+  </body>
+</html>
